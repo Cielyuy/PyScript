@@ -66,6 +66,7 @@ txtDataStoredClipName = 'txtData'
 txtDataStoredClipDir = os.path.join(Clip_Whole_Dir,Specified_Dir,txtDataStoredClipName)  ##存储txt文件的路径
 ##辅助文件的存储地址
 auxiliaryDir = os.path.join(absoluteDir,'Auxiliray')
+
 if os.path.exists(txtDataStoredClipDir):
     pass
 else:
@@ -287,14 +288,14 @@ b_j_f.close()
 b_c_f.close()
 comFile.close()
 ##把py文件复制过去，并调用auxiliaryDir
-#pyPath = os.path.join(txtDataStoredClipDir,'SinglePra.py')
-# sinPath =  os.path.join(auxiliaryDir,'SinglePra.py')
+pyPath = os.path.join(txtDataStoredClipDir,'SinglePra.py')
+sinPath =  os.path.join(auxiliaryDir,'SinglePra.py')
 #sinPath =  r'E:\LGF\Sim\Script\Auxiliary\SinglePra.py'
-#shutil.copyfile(sinPath,pyPath)
+shutil.copyfile(sinPath,pyPath)
 # shutil.copyfile(pyPath,sinPath)
 #os.system(Clip_Whole_Dir+Specified_Dir +"B_comFile.bat")##调用系统程序
 # os.system('cd '+txtDataStoredClipDir)
-#os.system('cd '+txtDataStoredClipDir+ ' && python '+pyPath)
+os.system('cd '+txtDataStoredClipDir+ ' && python '+pyPath)
 # os.system('python '+pyPath)
 #E:\LGF\Sim\Script\Auxiliary\SinglePra.py
 
